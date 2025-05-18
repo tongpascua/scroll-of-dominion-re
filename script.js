@@ -1,5 +1,11 @@
+Scroll of Dominion - script.js with Audio FX
 document.addEventListener("DOMContentLoaded", function () {
   const xpFill = document.querySelector(".xp-fill");
+
+  // Load audio elements
+  const scrollBotAudio = new Audio("https://www.myinstants.com/media/sounds/anime-wow-sound-effect.mp3");
+  const cryptoSealAudio = new Audio("https://www.myinstants.com/media/sounds/power-up.mp3");
+  const xpCircleAudio = new Audio("https://www.myinstants.com/media/sounds/level-up.mp3");
 
   function triggerXPAnimation() {
     xpFill.style.transition = "none";
@@ -15,17 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.querySelector(".scroll-btn:nth-of-type(1)").onclick = function () {
-    alert("ScrollBot summoned!");
+    scrollBotAudio.play();
     triggerXPAnimation();
   };
 
   document.querySelector(".scroll-btn:nth-of-type(2)").onclick = function () {
-    alert("Accessing CryptoSeal...");
+    cryptoSealAudio.play();
     triggerXPAnimation();
   };
 
   document.querySelector(".scroll-btn:nth-of-type(3)").onclick = function () {
-    alert("XP Circle Unlocked!");
+    xpCircleAudio.play();
     triggerXPAnimation();
   };
 });
+ok ok
