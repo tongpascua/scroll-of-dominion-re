@@ -35,4 +35,5 @@ document.addEventListener("DOMContentLoaded", function () {
     xpCircleAudio.play();
     triggerXPAnimation();
   });
-});
+});Final XP + Audio script.js
+
