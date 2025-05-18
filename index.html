@@ -43,20 +43,53 @@
       width: 80%;
       background: linear-gradient(90deg, #ff4fcf, #ff8cff);
       height: 100%;
-      animation: pulse 2s infinite alternate;
-    }
-    @keyframes pulse {
-      from { box-shadow: 0 0 10px #ff4fcf; }
-      to { box-shadow: 0 0 20px #ff8cff; }
     }
   </style>
 </head>
-<script src="script.js"></script>
 <body>
+
   <h1>🧬 SCROLL OF DOMINION</h1>
-  <a class="scroll-btn" href="https://chat.openai.com" target="_blank">Summon ScrollBot</a>
-  <a class="scroll-btn" href="https://payborit.com" target="_blank">Access CryptoSeal</a>
-  <a class="scroll-btn" href="https://example.com/ambassador" target="_blank">Unlock XP Circle</a>
-  <div class="xp-bar"><div class="xp-fill"></div></div>
+
+  <a class="scroll-btn" href="#">Summon ScrollBot</a>
+  <a class="scroll-btn" href="#">Access CryptoSeal</a>
+  <a class="scroll-btn" href="#">Unlock XP Circle</a>
+
+  <div class="xp-bar">
+    <div class="xp-fill" style="width: 80%;"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const xpFill = document.querySelector(".xp-fill");
+
+  function triggerXPAnimation() {
+    xpFill.style.transition = "none";
+    xpFill.style.width = "0%";
+    void xpFill.offsetWidth;
+    xpFill.style.transition = "width 1s ease-in-out";
+    xpFill.style.width = "100%";
+
+    setTimeout(() => {
+      xpFill.style.transition = "width 0.5s ease-in-out";
+      xpFill.style.width = "80%";
+    }, 2000);
+  }
+
+  document.querySelector(".scroll-btn:nth-of-type(1)").onclick = function () {
+    alert("ScrollBot summoned!");
+    triggerXPAnimation();
+  };
+
+  document.querySelector(".scroll-btn:nth-of-type(2)").onclick = function () {
+    alert("Accessing CryptoSeal...");
+    triggerXPAnimation();
+  };
+
+  document.querySelector(".scroll-btn:nth-of-type(3)").onclick = function () {
+    alert("XP Circle Unlocked!");
+    triggerXPAnimation();
+  };
+});
