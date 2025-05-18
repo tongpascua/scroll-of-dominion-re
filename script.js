@@ -1,4 +1,3 @@
-Scroll of Dominion - script.js with Audio FX
 document.addEventListener("DOMContentLoaded", function () {
   const xpFill = document.querySelector(".xp-fill");
 
@@ -35,4 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
     triggerXPAnimation();
   };
 });
-ok ok
+Fix script.js fully + inject chant FX
